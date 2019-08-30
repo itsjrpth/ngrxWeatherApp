@@ -8,13 +8,13 @@ export enum ForecastActionTypes {
 export class ForecastLoaded implements Action {
     readonly type = ForecastActionTypes.ForecastLoaded;
 
-    constructor(public forecast: any){}
+    constructor(public forecast: any) { }
 }
 
 export class ForecastLoadFailed implements Action {
     readonly type = ForecastActionTypes.ForecastLoadFailed;
 
-    constructor(public zipcode: string, public error: any){}
+    constructor(public zipcode: string, public error: any) { }
 }
 
 export type ForecastActions = ForecastLoaded | ForecastLoadFailed;

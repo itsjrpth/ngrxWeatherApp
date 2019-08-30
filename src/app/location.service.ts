@@ -1,29 +1,29 @@
 import { Injectable } from '@angular/core';
-import {WeatherService} from "./weather.service";
+import { WeatherService } from './weather.service';
 
-export const LOCATIONS : string = "locations";
+export const LOCATIONS = 'locations';
 
 @Injectable()
 export class LocationService {
 
-  locations : string[] = [];
+  locations: string[] = [];
 
   constructor() {
 
   }
 
-  addLocation(zipcode : string){
+  addLocation(zipcode: string) {
     this.locations.push(zipcode);
   }
 
-  removeLocation(zipcode : string){
-    let index = this.locations.indexOf(zipcode);
-    if (index !== -1){
+  removeLocation(zipcode: string) {
+    const index = this.locations.indexOf(zipcode);
+    if (index !== -1) {
       this.locations.splice(index, 1);
     }
   }
 
-  getLocations() : string[]{
+  getLocations(): string[] {
     return this.locations;
   }
 }

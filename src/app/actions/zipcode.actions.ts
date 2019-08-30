@@ -7,12 +7,12 @@ export enum ZipcodeActionTypes {
 
 export class AddZipcode implements Action {
     readonly type = ZipcodeActionTypes.AddZipcode;
-    constructor(public zipcode: string){}
+    constructor(public zipcode: string) { }
 }
 
 export class RemoveZipcode implements Action {
     readonly type = ZipcodeActionTypes.RemoveZipcode;
-    constructor(public zipcode: string){}
+    constructor(public zipcode: string) { }
 }
 
 
